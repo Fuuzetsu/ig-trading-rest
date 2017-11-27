@@ -1,0 +1,62 @@
+name:                ig-trading-rest
+version:             0.1.0.0
+synopsis:            Bindings to IG's REST API.
+homepage:            https://github.com/Fuuzetsu/ig-trading-rest#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Mateusz Kowalczyk
+maintainer:          fuuzetsu@fuuzetsu.co.uk
+copyright:           2017 Mateusz Kowalczyk
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+description:         Please see the README on Github at <https://github.com/Fuuzetsu/ig-trading-rest#readme>
+
+library
+  hs-source-dirs:      src
+  exposed-modules:
+                       Web.IG.Confirms.DealReference.Get.Version1
+                       Web.IG.Confirms.DealReference.Get.Version1.Request
+                       Web.IG.Confirms.DealReference.Get.Version1.Response
+                       Web.IG.Positions.Otc.Post.Version2
+                       Web.IG.Positions.Otc.Post.Version2.Request
+                       Web.IG.Positions.Otc.Post.Version2.Response
+                       Web.IG.Session.Post.Version2
+                       Web.IG.Session.Post.Version2.Request
+                       Web.IG.Session.Post.Version2.Response
+                       Web.IG.Session.RefreshToken.Post.Version1
+                       Web.IG.Session.RefreshToken.Post.Version1.Request
+                       Web.IG.Session.RefreshToken.Post.Version1.Response
+                       Web.IG.Types.Account
+                       Web.IG.Types.AccountInfo
+                       Web.IG.Types.AccountType
+                       Web.IG.Types.AffectedDealStatus
+                       Web.IG.Types.Deal
+                       Web.IG.Types.DealCondition
+                       Web.IG.Types.DealId
+                       Web.IG.Types.DealStatus
+                       Web.IG.Types.Direction
+                       Web.IG.Types.Environment
+                       Web.IG.Types.Epic
+                       Web.IG.Types.OrderTimeInForce
+                       Web.IG.Types.PositionOrderType
+                       Web.IG.Types.PositionStatus
+                       Web.IG.Types.PositionTimeInForce
+                       Web.IG.Types.WorkingOrderType
+                       Web.IG.WorkingOrders.Otc.Post.Version2
+                       Web.IG.WorkingOrders.Otc.Post.Version2.Request
+                       Web.IG.WorkingOrders.Otc.Post.Version2.Response
+  build-depends:       base >= 4.7 && < 5,
+                       aeson,
+                       containers,
+                       servant,
+                       servant-client,
+                       text,
+                       vector
+  default-language:    Haskell2010
+  ghc-options:         -Wall
+
+source-repository head
+  type:     git
+  location: https://github.com/githubuser/ig-trading-rest
