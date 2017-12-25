@@ -22,6 +22,9 @@ library
                        Web.IG.Positions.Otc.Post.Version2
                        Web.IG.Positions.Otc.Post.Version2.Request
                        Web.IG.Positions.Otc.Post.Version2.Response
+                       Web.IG.Prices.Epic.Get.Version3
+                       Web.IG.Prices.Epic.Get.Version3.Request
+                       Web.IG.Prices.Epic.Get.Version3.Response
                        Web.IG.Session.Post.Version2
                        Web.IG.Session.Post.Version2.Request
                        Web.IG.Session.Post.Version2.Response
@@ -32,6 +35,7 @@ library
                        Web.IG.Types.AccountInfo
                        Web.IG.Types.AccountType
                        Web.IG.Types.AffectedDealStatus
+                       Web.IG.Types.Allowance
                        Web.IG.Types.Deal
                        Web.IG.Types.DealCondition
                        Web.IG.Types.DealId
@@ -39,10 +43,15 @@ library
                        Web.IG.Types.Direction
                        Web.IG.Types.Environment
                        Web.IG.Types.Epic
+                       Web.IG.Types.HistoricalPrice
+                       Web.IG.Types.InstrumentType
                        Web.IG.Types.OrderTimeInForce
+                       Web.IG.Types.PageData
                        Web.IG.Types.PositionOrderType
                        Web.IG.Types.PositionStatus
                        Web.IG.Types.PositionTimeInForce
+                       Web.IG.Types.Price
+                       Web.IG.Types.Resolution
                        Web.IG.Types.WorkingOrderType
                        Web.IG.WorkingOrders.Otc.Post.Version2
                        Web.IG.WorkingOrders.Otc.Post.Version2.Request

@@ -10,7 +10,6 @@ module Web.IG.Types.DealCondition
 
 import qualified Data.Aeson as Aeson
 import qualified Data.Aeson.Types as Aeson (typeMismatch)
-import           Data.Text (Text)
 import qualified Data.Text as T
 import           GHC.Generics (Generic)
 import           Text.Read (readMaybe)
@@ -180,7 +179,6 @@ instance Aeson.ToJSON DealCondition where
   toEncoding = Aeson.toEncoding . T.pack . show
 
 instance Aeson.FromJSON DealCondition where
-  parseJSON v@(Aeson.String e) = case readMaybe (T.unpack e) of
+  parseJSON = Aeson.withText "DealCondition" $ \e -> case readMaybe (T.unpack e) of
     Just c -> pure c
-    Nothing -> Aeson.typeMismatch "DealCondition" v
-  parseJSON invalid = Aeson.typeMismatch "DealCondition" invalid
+    Nothing -> Aeson.typeMismatch "DealCondition" (Aeson.String e)
